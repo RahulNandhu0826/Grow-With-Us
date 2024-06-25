@@ -1,0 +1,151 @@
+{% load static %}
+{% get_static_prefix as d %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>about</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+  background: #d6d6d6;
+}
+       li a{
+       color: white;
+       font-weight: 600;
+       font-size: 18px;
+   }
+
+
+/* sidebar    */
+.imgs img{
+ height: 150px;
+ width: 150px;
+ border-radius: 100px;
+ margin-top: 100px;
+}
+.imgs{
+ padding: 20px;
+}
+.sidebar {
+ margin: 0;
+ padding: 0;
+ width: 200px;
+ background-color: black;
+ position: fixed;
+ height: 100%;
+ overflow: auto;
+}
+.sidebar a {
+ padding: 6px 8px 6px 16px;
+ text-decoration: none;
+ font-size: 20px;
+ color: #818181;
+ display: block;
+ text-transform: uppercase;
+}
+
+.sidebar a:hover {
+ color: #f1f1f1;
+}
+.but{
+margin-left: 10px;
+ width: 180px;
+ height: 1px;
+ background-color: white;
+}
+/* end sidebar */
+nav{
+  position: fixed;
+}
+.navbar-brand{
+ color: white;
+ font-family: 'Pacifico', cursive;
+}
+P{
+  text-align: justify;
+  font-family: 'PT Sans', sans-serif;
+}
+.text{
+  padding: 100px 0 0 100px;
+}
+.baby-img img{
+  width: 500px;
+}
+ </style>
+  <body>
+    <div class="sidebar">
+      <div class="imgs">
+        <img src="{{d}}img/user_logo.jpg" alt="" width="150px">
+      </div>
+      <h4 style="color: white; padding:0px 50px;">About</h4>
+    <div class="but"></div> <br>
+    <a href="">Home</a>
+    <a href="">Back</a>
+    </div>
+    
+  <nav class="navbar navbar-expand-sm bg-dark fixed-top"> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="navbar-brand">Grow With Us</div>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button> -->
+      </ul>      
+  </nav>
+
+    <div class="container">
+        <div class="text">
+          <h2>ABOUT US</h2> <br>
+          <p>Nutritional problems in children constitute the major health problem in 
+              developing countries. Children are the keystone of the world. So their better 
+              growth impact their future development. Nutrition education plays a 
+              fundamental role in encouraging your kids to lead a healthier life. Learning about 
+              nutrition might not seem so fun for kids. It is also important to start early, that 
+              way when they become adults, they’ll be accustomed to living a healthy lifestyle. 
+              Most parents don’t know the basics of keeping children healthy, like offering 
+              foods, making sure they get enough sleep and brain development. 
+              So we present Grow with us web application developed to bring good health to 
+              the children.This mainly focus on health of kids and also providing dietitian for 
+              maintaining growth of children at each stages of growth. For children, the right to 
+              health is vital because they are vulnerable beings, more at risk to illness and 
+              health complications. When children are spared from disease, they can grow into 
+              healthy adults, and in this way, contribute to the development of dynamic and 
+              productive societies. It improves the health of children from infant to adults. 
+              Parents can register their children in this, based on their age group and by 
+              applying children’s head circumference, height and weight. That may be infant, 
+              toddler or adult. Parents can choose the plans through it. If the parent need a 
+              dietitian for their children, they can select and pay for dietitian. Vaccination is 
+              essential for the better growth of children’s .So that it is very important to get the 
+              vaccination at the correct time. The parent would be able to see all details of 
+              vaccination when they register it for the first time. The correct information about 
+              the vaccination given to the parents through message notifications. With parents 
+              guidance the kids can have fun with activities such as stories, videos and lullaby. It 
+              helps in improving brain development and skills for the kids.</p>
+      
+      <div class="row">
+        <div class="col-6 baby-img">
+          <img src="https://images.pexels.com/photos/4079282/pexels-photo-4079282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="baby eating food">
+        </div>
+        <div class="col-6 baby-img">
+          <img src="https://images.pexels.com/photos/5082625/pexels-photo-5082625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="baby eating food">
+        </div>
+      </div>
+    </div>
+        </div>
+        <br><br><br>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

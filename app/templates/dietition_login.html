@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>dietition login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    body{
+      background-image: url(https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    form{
+      position: relative;
+       top: 150px;
+       left: 250px;
+       animation-name: form;
+       animation-duration: .8s;
+       animation-timing-function: ease;
+       animation-fill-mode: backwards;
+    }
+    @keyframes form{
+        0%{
+            top: -400px;
+        }
+        100%{
+            top: 150px;
+        }
+    }
+    /* navbar */
+    li a{
+        color: rgb(37, 37, 37);
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .navbar-brand{
+        font-family: 'Pacifico', cursive;
+        text-shadow: 2px 2px 4px black;
+    }
+
+    /* end navbar */
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-sm">
+      <a href="/" class="navbar-brand text-light">GROW WITH US</a>
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                  <!-- <a class="nav-link" href=""></a> -->
+              </li>          
+          </ul> &nbsp;&nbsp;&nbsp;
+  </nav>
+
+      <div class="container">
+        <form class=" w-50 bg-light p-4 rounded border shadow-lg p-4 mb-4" method="post">
+          {% csrf_token %}
+          <h2>LOGIN</h2> <br>
+          <div class="form-group">
+            <label for="">User Name</label>
+            <input type="text" placeholder="username" class="form-control" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" placeholder="password" class="form-control" name="password" required>
+          </div>
+          
+<div class="row"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="submit" class="btn btn-primary col-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{keys1}}
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="dietition_reg">Create an account</a>
+</div>
+<center><h6 style="color: red;">{{keys1}}</h6></center>
+        </form>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

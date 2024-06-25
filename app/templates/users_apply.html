@@ -1,0 +1,183 @@
+
+{% load static %}
+{% get_static_prefix as d %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>users_apply</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    body{
+        background: url(https://images.pexels.com/photos/7282818/pexels-photo-7282818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+        li a{
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+    }
+ /* sidebar    */
+.imgs img{
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  margin-top: 100px;
+}
+.imgs{
+  padding: 20px;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  overflow-x: auto;
+}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  text-transform: capitalize;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.but{
+margin-left: 10px;
+  width: 150px;
+  height: 1px;
+  background-color: white;
+}
+/* end sidebar */
+.navbar-brand{
+  color: white;
+  font-family: 'Pacifico', cursive;
+}
+.main-marq{
+  margin-left: 200px;
+}
+.marq{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px !important;
+}
+  </style>
+  <body>
+    <div class="sidebar">
+        <div class="imgs">
+          <img src="{{d}}img/user_logo.jpg" alt="" width="150px">
+        </div>
+        <h4 style="color: white; padding:0px 50px;">USER</h4>
+      <div class="but"></div> <br>
+      <a href="">Home</a>
+      <a href="user_profile_view">User Profile</a>
+      <a href="dietition_list_view">View Dietitian</a>
+      <a href="user_feedback">User Feedback</a>
+      <a href="user_view_feedback">View Feedback</a>
+      <a href="vaccinations_page">Vaccination Details</a>
+      <a href="activities_view_for_users">Activities</a>
+      <a href="appointments_view_for_users">View user Appointment</a>
+      <!-- <a href="dietcharts">Diet chart</a> -->
+      <a href="users_view_healthy_tip">Healthy tips</a>
+      <!-- {% if key12 %} -->
+     
+      <!-- {% endif %} -->
+
+
+      </div>
+      
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top"> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="navbar-brand">Grow With Us</div>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <!-- <a href="user_logout" button class="btn btn-outline-success my-2 my-sm-0"Logout</button></a> -->
+          <!-- <a href="user_logout" button class="btn btn-secondary">LogOut</button></a> -->
+          <a href="user_logout" class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</a>
+
+        </ul>      
+    </nav> 
+
+<br><br><br><br>
+<div class="main-marq">
+  <marquee behavior="scroll" direction="right" scrolldelay="100">
+    <div class="marq">
+      <p>
+
+      {% for i in key1 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key2 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key3 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key4 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key5 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key6 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key7 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key8 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key9 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key10 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% for i in key11 %}
+      <h6 style="color: red;">{{i.vaccine_name}} - {{i.v_dose}} - {{i.v_age}}</h6>
+      {% endfor %}
+  
+      {% if key22 %}
+      <h6 style="color: red;">{{key22}}</h6>
+      {% endif %}
+  </p>
+ 
+    </div>
+  </marquee>
+      
+  
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

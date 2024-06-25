@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dietitian register</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins',sans-serif;
+}
+body{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+background: url(https://images.pexels.com/photos/8844386/pexels-photo-8844386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+background-size: cover;
+background-attachment: fixed;
+}
+.container{
+max-width: 700px;
+width: 100%;
+background-color: #fff;
+padding: 25px 30px;
+border-radius: 5px;
+box-shadow: 5px 5px 50px black;
+}
+.container .title{
+font-size: 25px;
+font-weight: 500;
+position: relative;
+}
+.container .title::before{
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 30px;
+border-radius: 5px;
+/* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+}
+.content form .user-details{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+margin-bottom: 15px;
+width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+display: block;
+font-weight: 500;
+margin-bottom: 5px;
+}
+.user-details .input-box input{
+height: 45px;
+width: 100%;
+outline: none;
+font-size: 16px;
+border-radius: 5px;
+padding-left: 15px;
+border: 1px solid #ccc;
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+border-color: #9b59b6;
+}
+form .gender-details .gender-title{
+font-size: 20px;
+font-weight: 500;
+}
+form .category{
+ display: flex;
+ width: 80%;
+ margin: 14px 0 ;
+ justify-content: space-between;
+}
+form .category label{
+ display: flex;
+ align-items: center;
+ cursor: pointer;
+}
+form .category label .dot{
+height: 18px;
+width: 18px;
+border-radius: 50%;
+margin-right: 10px;
+background: #d9d9d9;
+border: 5px solid transparent;
+transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+ background: #9b59b6;
+ border-color: #d9d9d9;
+}
+form input[type="radio"]{
+ display: none;
+}
+form .button{
+ height: 45px;
+ margin: 35px 0
+}
+form .button input{
+ height: 100%;
+ width: 100%;
+ border-radius: 5px;
+ border: none;
+ color: #fff;
+ font-size: 18px;
+ font-weight: 500;
+ letter-spacing: 1px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ background: #2f9ae2;
+}
+form .button input:hover{
+background: #5aa3d4;
+}
+@media(max-width: 584px){
+.container{
+max-width: 100%;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: 100%;
+}
+form .category{
+  width: 100%;
+}
+.content form .user-details{
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.user-details::-webkit-scrollbar{
+  width: 5px;
+}
+}
+@media(max-width: 459px){
+.container .content .category{
+  flex-direction: column;
+}
+}
+button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 40px;
+  font-weight: 500;
+  background-color: rgb(90, 89, 89);
+  border: 0;
+  outline: 0;
+  color: white;
+}
+    /* navbar */
+    li a{
+        color: rgb(37, 37, 37);
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .navbar-brand{
+        font-family: 'Pacifico', cursive;
+        text-shadow: 2px 2px 4px black;
+    }
+  </style>
+  <body>
+    
+ <button class="btn btn-secondary ml-auto" onclick="history.back()">Back</button>
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+          <form action="#" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">User Name</span>
+                <input type="text" placeholder="Enter your name" name="d_username" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Name</span>
+                <input type="text" placeholder="Enter your name" name="d_name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Date Of Birth</span>
+                <input type="date" placeholder="Enter your username" name="d_dob" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Qualification</span>
+                <input type="text" placeholder="Enter your Qualification" name="d_qul" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Experience</span>
+                <input type="text" placeholder="Enter your Experience" name="d_exp" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter your Phone Number" maxlength="10" minlength="10"  name="d_phn" pattern="[1-9]{1}[0-9]{9}" required>
+              </div>
+
+              <div class="input-box">
+                <span class="details">Email Address</span>
+                
+    
+                  <!-- <textarea name="mail" id="" cols="40" rows="5" placeholder="Enter your email" class="form-control" required></textarea> -->
+                <input type="email" placeholder="Enter your email" name="mail" required>
+              
+            </div>
+
+
+              <div class="input-box">
+                <span class="details">Upload Info</span>
+                <input type="file" style="padding-top: 10px; box-sizing: border-box;" name="d_img" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" placeholder="Enter your password"  name="password"required>
+              </div>
+              <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="password" placeholder="Confirm your password" name="c_password" required>
+              </div>
+            </div>
+            <input type="hidden" value="no" name="dietition_approvement">
+            
+
+            <div class="button">
+                <input type="submit" value="Register">
+                <a href="dietition_log">login here</a> &nbsp;&nbsp; 
+              </div>
+              <center><h6 style="color: red;">{{key}}</h6></center>
+            </form>
+          </div>
+        </div>
+      
+    
+</body>
+</html>

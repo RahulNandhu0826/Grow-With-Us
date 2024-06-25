@@ -1,0 +1,134 @@
+
+{% load static %}
+{% get_static_prefix as d %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>admin view pictures</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    body{
+    background: url(https://images.pexels.com/photos/4050290/pexels-photo-4050290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-attachment: fixed;
+}
+       li a{
+       color: white;
+       font-weight: 600;
+       font-size: 18px;
+   }
+
+
+/* sidebar    */
+.imgs img{
+ height: 150px;
+ width: 150px;
+ border-radius: 100px;
+ margin-top: 100px;
+}
+.imgs{
+ padding: 20px;
+}
+.sidebar {
+ margin: 0;
+ padding: 0;
+ width: 200px;
+ background-color: black;
+ position: fixed;
+ height: 100%;
+ overflow: auto;
+}
+.sidebar a {
+ padding: 6px 8px 6px 16px;
+ text-decoration: none;
+ font-size: 20px;
+ color: #818181;
+ display: block;
+ text-transform: capitalize;
+}
+
+.sidebar a:hover {
+ color: #f1f1f1;
+}
+.but{
+margin-left: 10px;
+ width: 180px;
+ height: 1px;
+ background-color: white;
+}
+/* end sidebar */
+.navbar-brand{
+ color: white;
+ font-family: 'Pacifico', cursive;
+}
+
+.profile{
+margin-left: 50px;
+}
+</style>
+  <body>
+
+    
+    <div class="sidebar">
+        <div class="imgs">
+          <img src="{{d}}img/user_logo.jpg" alt="" width="150px">
+        </div>
+        <h4 style="color: white; padding:0px 50px;">ADMIN</h4>
+      <div class="but"></div> <br>
+  
+      <a href="admin_applys">Home</a>
+      </div>
+      
+    <nav class="navbar navbar-expand-sm bg-dark"> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="navbar-brand">Grow With Us</div>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+         
+        </ul>      
+    </nav> 
+    
+
+<div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+
+    
+        <table class="table table-bordered table-dark table-striped table-hover mt-5">
+
+            <tr>
+                
+                <th>Provided Age Is</th>
+                <th>Lullabies</th>
+                <th>Lullaby Name</th>
+
+            </tr>
+            {% for i in view %}
+            <tr>
+                <td>{{i.age}}</td>
+                <td><audio src="{{i.lullaby.url}}" controls></audio></td>
+                <td>{{i.lullaby_name}}</td>
+                <td><a href="{% url 'lullaby_delete' i.id %}" class="btn btn-danger">Delete</a></td>
+            </tr>
+            {% endfor %}
+                
+
+        </table>
+    </form>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+

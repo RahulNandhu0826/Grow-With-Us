@@ -1,0 +1,44 @@
+<!-- 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>User name</th>
+            <th>NAme</th>
+            <th>date of birth</th>
+            <th>qualification</th>
+            <th>experience</th>
+            <th>contact number</th>
+            <th>Image</th>
+        </tr>
+        <tr>
+            <td>{{d_view.diet_Username}}</td>
+            <td>{{d_view.diet_Name}}</td>
+            <td>{{d_view.diet_Date_of_Birth}}</td>
+            <td>{{d_view.diet_Qualifications}}</td>
+            <td>{{d_view.diet_Experience}}</td>
+            <td>{{d_view.diet_Mobile_no}}</td>
+            <td><img src="{{d_view.diet_Image.url}}" width="60" height="70" alt=""></td>
+
+            <td><a href="{% url 'user_view_plan' i.id %}"><button>view plans</button></a></td>
+            <td><button>payment plans</button></a></td>
+
+            
+        </tr>
+
+    </table>
+</body>
+</html>
+
+ -->

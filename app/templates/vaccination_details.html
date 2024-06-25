@@ -1,0 +1,202 @@
+
+
+{% load static %}
+{% get_static_prefix as d %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>vaccination_details</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+   body{
+       background: url(https://images.pexels.com/photos/8949892/pexels-photo-8949892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+       background-size: cover;
+       background-attachment: fixed;
+       
+   }
+       li a{
+       color: white;
+       font-weight: 600;
+       font-size: 18px;
+   }
+
+   
+/* sidebar    */
+.imgs img{
+ height: 150px;
+ width: 150px;
+ border-radius: 100px;
+ margin-top: 100px;
+}
+.imgs{
+ padding: 20px;
+}
+.sidebar {
+ margin: 0;
+ padding: 0;
+ width: 200px;
+ background-color: black;
+ position: fixed;
+ height: 100%;
+ overflow: auto;
+}
+.sidebar a {
+ padding: 6px 8px 6px 16px;
+ text-decoration: none;
+ font-size: 20px;
+ color: #818181;
+ display: block;
+ text-transform: capitalize;
+}
+
+.sidebar a:hover {
+ color: #f1f1f1;
+}
+.but{
+margin-left: 10px;
+ width: 180px;
+ height: 1px;
+ background-color: white;
+}
+/* end sidebar */
+.navbar-brand{
+ color: white;
+ font-family: 'Pacifico', cursive;
+}
+p{
+    text-align: justify;
+    color: black;
+    text-shadow: 0.5px 0.5px 1px black;
+}
+.container{
+    padding: 150px 0 100px 50px;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+ </style>
+  <body>
+    <div class="sidebar">
+        <div class="imgs">
+          <img src="{{d}}img/user_logo.jpg" alt="" width="150px">
+        </div>
+        <h4 style="color: white; padding:0px 50px;">USER</h4>
+      <div class="but"></div> <br>
+      <!-- <button onclick="history.back()">Back</button> -->
+      <!-- <a href="">Back</a> -->
+      
+      </div>
+      
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top"> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="navbar-brand">Grow With Us</div>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button> -->
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="history.back()">Back</button>
+        </ul>      
+    </nav> 
+
+    <div class="container">
+    <h1>BABY IMMUNIZATION SCHEDULE / VACCINATION CHART</h1>
+
+
+
+    <p>Right from the time of birth, till the age of 12, your child will be vulnerable to a host of diseases, viruses, and bacteria. At such a tender age, the body of your child may not have the required immune system to protect them from these communicable diseases. In an event, where your child may contract a disease or virus, the consequences may be dire. Certain diseases such as diphtheria, tetanus, whooping cough and HPV still exist today, and can still be easily be transmitted from one individual to another. In many parts of the world, vaccine-preventable diseases are still common, and there is every chance of your child contracting them.</p>
+    <p>To prevent such an occurrence, the ideal solution is to protect your child through vaccination. Vaccinations ensure that your child is immune to certain communicable diseases, thus preventing them from contracting it or even suffering from the effects of it. In the occasion where they come into contact with an infected individual, the vaccinated child will not be affected by the serious effects or complications.</p>
+    <p>With timely baby vaccinations, your child will have a 90% chance of immunity against vaccine-preventable diseases. As different diseases can affect your child at different ages, it is crucial that you, as a parent, ensure the protection of your child. Apollo Cradle is well equipped and skilled in providing timely vaccinations for babies. Our team will provide you with adequate knowledge and specifics regarding each immunization and the appropriate immunization scheduling. A typical children vaccines schedule chart is:</p>
+
+    <h1>Baby Immunization Schedule Table (based on IAPCOI recommendations) </h1>
+    <br><br>
+    <table class="table table-bordered table-striped table-hover table-dark">
+        <tr>
+            <th>birth</th>
+            <td>BCG, Hep B1, OPV</td>
+
+        </tr>
+
+        <tr>
+            <th>6 weeks</th>
+            <td>DTwP /DTaP1, Hib-1, IPV-1, Hep B2, PCV 1,Rota-1</td>
+
+        </tr>
+        <tr>
+            <th>10 weeks</th>
+            <td>DTwP /DTaP2, Hib-2, IPV-2, Hep B3, PCV 2, Rota-2</td>
+        </tr>
+        <tr>
+            <th>14Weeks</th>
+            <td>DTwP /DTaP3, Hib-3, IPV-3, Hep B4, PCV 3, Rota-3*</td>
+        </tr>
+        <tr>
+            <th>6 Months</th>
+            <td>Influenza-1</td>
+        </tr>
+
+        <tr>
+            <th>7 Months</th>
+            <td>Influenza-2</td>
+        </tr>
+
+        <tr>
+            <th>6 – 9 Months</th>
+            <td>Typhoid Conjugate Vaccine</td>
+        </tr>
+        <tr>
+            <th>9 Months</th>
+            <td>MMR 1 (Mumps, measles, Rubella)</td>
+        </tr>
+        <tr>
+            <th>12 Months</th>
+            <td>Hepatitis A- 1</td>
+        </tr>
+        <tr>
+            <th>12 – 15 Months</th>
+            <td>PCV Booster</td>
+        </tr>
+        <tr>
+            <th>15 Months</th>
+            <td>MMR 2, Varicella</td>
+        </tr>
+        <tr>
+            <th>16 – 18 Months</th>
+            <td>DTwP /DTaP, Hib, IPV</td>
+        </tr>
+        <tr>
+            <th>18 – 19 Months</th>
+            <td>Hepatitis A- 2**, Varicella 2</td>
+        </tr>
+        <tr>
+            <th>4 – 6 years</th>
+            <td>DTwP /DTaP, IPV, MMR 3</td>
+        </tr>
+        <tr>
+            <th>9 – 15years (Girls)</th>
+            <td>HPV (2 doses)</td>
+        </tr>
+        <tr>
+            <th>10 – 12 Years</th>
+            <td>Tdap/ Td</td>
+        </tr> 
+        <tr>
+            <th>2nd, 3rd, 4th and 5th Year</th>
+            <td>Annual Influenza Vaccine</td>
+        </tr> 
+        
+    </table>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

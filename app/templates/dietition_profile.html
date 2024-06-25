@@ -1,0 +1,166 @@
+
+{% load static %}
+{% get_static_prefix as d %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>dietitian profile</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+   body{
+       background-image: url(https://images.pexels.com/photos/4050290/pexels-photo-4050290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+       background-size: cover;
+       background-attachment: fixed;
+   }
+       
+    /* sidebar    */
+.imgs img{
+ height: 150px;
+ width: 150px;
+ border-radius: 100px;
+ margin-top: 100px;
+}
+.imgs{
+ padding: 20px;
+}
+.sidebar {
+ margin: 0;
+ padding: 0;
+ width: 200px;
+ background-color: black;
+ position: fixed;
+ height: 100%;
+ overflow: auto;
+}
+.sidebar a {
+ padding: 6px 8px 6px 16px;
+ text-decoration: none;
+ font-size: 20px;
+ color: #818181;
+ display: block;
+ text-transform: capitalize;
+}
+
+.sidebar a:hover {
+ color: #f1f1f1;
+}
+.but{
+margin-left: 10px;
+ width: 180px;
+ height: 1px;
+ background-color: white;
+}
+/* end sidebar */
+.navbar-brand{
+ color: white;
+ font-family: 'Pacifico', cursive;
+}
+
+.container{
+    padding: 50px;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+  
+  cursor: pointer;
+}
+.dropsdowns{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transform: scale(1,1);
+  overflow: hidden;
+  transition: ease;
+  transition-duration: 2s;
+  
+}
+.dropdown:hover .dropsdowns{
+  display: block;
+  
+  
+}
+
+
+ </style>
+  <body>
+
+    <div class="sidebar">
+      <div class="imgs">
+        <img src="{{d}}img/user_logo.jpg" alt="" width="150px">
+      </div>
+      <h4 style="color: white; padding:0px 50px;">DIETITIAN</h4>
+    <div class="but"></div> <br>
+    <a href="diet_applys">Home</a>
+    <!-- <a href="">Back</a> -->
+
+    </div>
+    
+  <nav class="navbar navbar-expand-sm bg-dark"> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="navbar-brand">Grow With Us</div>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button> -->
+      </ul>      
+  </nav> 
+  
+
+    <div class="container">
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+      
+        <table class="table table-bordered table-hover table-dark table-striped mt-5">
+            <tr>
+                <th>User name</th>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Qualification</th>
+                <th>Experience</th>
+                <th>Email-Id</th>
+                <th>Contact number</th>
+                <th>Image</th>
+            </tr>
+            {% for i in view  %}
+            <tr>
+                <td>{{i.diet_Username}}</td>
+                <td>{{i.diet_Name}}</td>
+                <td>{{i.diet_Date_of_Birth}}</td>
+                <td>{{i.diet_Qualifications}}</td>
+                <td>{{i.diet_Experience}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.diet_Mobile_no}}</td>
+                <td class="dropdown"><img src="{{i.diet_Image.url}}" alt="" height="60px" width="60px">
+                  <br>
+                  <div class="dropsdowns">
+                    <img src="{{i.diet_Image.url}}" alt="" height="320px" width="360px">
+                  </div>
+                  <br>
+
+                </td>
+
+                <td><a href="{% url 'dietition_profile' i.id %}" class="btn btn-danger">Update</a></td>
+            </tr>
+            {% endfor %}
+    
+        </table>
+      </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

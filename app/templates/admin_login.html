@@ -1,0 +1,92 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>admin login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    body{
+        background: url(https://images.pexels.com/photos/2874782/pexels-photo-2874782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    form{
+       /* margin: 150px 0 0 250px; */
+       position: relative;
+       top: 150px;
+       left: 250px;
+       animation-name: form;
+       animation-duration: .8s;
+       animation-timing-function: ease;
+       animation-fill-mode: backwards;
+    }
+    @keyframes form{
+        0%{
+            top: -400px;
+        }
+        100%{
+            top: 150px;
+        }
+    }
+     /* navbar */
+     li a{
+        color: rgb(37, 37, 37);
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .navbar-brand{
+        font-family: 'Pacifico', cursive;
+    }
+
+    /* end navbar */
+
+  
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-sm">
+      <a href="/" class="navbar-brand text-light">GROW WITH US</a>
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                  <!-- <a class="nav-link" href="#">Home</a> -->
+              </li>          
+          </ul> &nbsp;&nbsp;&nbsp;
+  </nav>
+
+    <div class="container">
+        
+
+        <form action="" method="post" class="w-50 border p-3 rounded-lg shadow-lg p-4 mb-4 bg-light">
+            {% csrf_token %}
+        
+    
+        <h2>LOGIN</h2> <br>
+        <div class="form-group">
+            <label for="">User Name</label>
+            <input type="text" name="uname" id="f1" class="form-control" placeholder="User Name">
+        </div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" name="psw" id="f2" class="form-control" placeholder="Password">
+        </div>
+    
+        <input type="submit" value="Login" class="btn btn-success col-3">
+        
+        
+        </form>
+        <center><h6 style="color: red;">{{key}}</h6></center>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
